@@ -8,11 +8,13 @@ class Solution {
           for(int j=i+1;j<n;j++){
 
             s2+=nums[j];
+           
           }
+          
           if(s1==s2){
             return i;
           }
-          s1+=nums[i];
+           s1+=nums[i];
 
         }
         
