@@ -14,18 +14,18 @@ class Solution {
         ListNode curr = dummyHead;
         int carry = 0;
 
-        // Loop runs as long as there are digits to process or a leftover carry
+        
         while (l1 != null || l2 != null || carry != 0) {
             int x = (l1 != null) ? l1.val : 0;
             int y = (l2 != null) ? l2.val : 0;
 
             int sum = carry + x + y;
-            carry = sum / 10; // Extract the next carry
+            carry = sum / 10; 
             
-            curr.next = new ListNode(sum % 10); // Store the last digit
+            curr.next = new ListNode(sum % 10); 
             curr = curr.next;
 
-            // Move to the next nodes if they exist
+            
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }
